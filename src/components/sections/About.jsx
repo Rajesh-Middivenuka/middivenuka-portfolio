@@ -83,9 +83,11 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-6 mt--8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt--8">
             <div className="p-6 rounded border-white/10 border hover:-translate-y-1 transition-all">
-              <h3>Education</h3>
+              <h3 class="text-3xl font-bold text-blue-500 text-center uppercase tracking-wide animate-bounce hover:scale-105 hover:text-orange-500 transition-all">
+                Education
+              </h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
                   <strong>
@@ -101,7 +103,9 @@ const About = () => {
               </ul>
             </div>
             <div className="p-6 rounded border-white/10 border hover:-translate-y-1 transition-all">
-              <h3>Work Expirence</h3>
+              <h3 class="text-3xl font-bold text-blue-500 text-center uppercase tracking-wide animate-bounce hover:scale-105 hover:text-orange-500 transition-all">
+                Work Expirence
+              </h3>
               <div className="space-y-4 text-gray-300">
                 <div>
                   <h4>software engineer at accenture(2022-present)</h4>

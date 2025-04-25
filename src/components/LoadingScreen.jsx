@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const LoadingScreen = ({ onComplete }) => {
   const [text, setText] = useState("");
-  const fullText = "<hello world/>";
+  const fullText = "Success is just around the corner...";
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
