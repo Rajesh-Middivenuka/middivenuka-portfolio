@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import RevealOnScroll from "../RevealOnScroll";
 import emailjs from "emailjs-com";
+
 const Contact = () => {
   const [fromData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
@@ -17,18 +19,19 @@ const Contact = () => {
         api_key
       )
       .then((result) => {
-        alert("message sent");
+        alert("Message sent");
         setFormData({ name: "", email: "", message: "" });
       })
-      .catch(() => alert("Oops something went wrong. please try again"));
+      .catch(() => alert("Oops something went wrong. Please try again"));
   };
+
   return (
     <section
       id="contact"
-      className="min-h-screen items-center justify-center py-20"
+      className="min-h-screen items-center justify-center py-20 overflow-x-hidden"
     >
       <RevealOnScroll>
-        <div className="px-4 w-150 m-auto">
+        <div className="px-4 w-full max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent text-center">
             Get In Touch
           </h2>
@@ -40,7 +43,7 @@ const Contact = () => {
                 name="name"
                 required
                 value={fromData.name}
-                placeholder="name..."
+                placeholder="Name..."
                 className="w-full bg-white/5 border-white/10 px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 onChange={(e) =>
                   setFormData({ ...fromData, name: e.target.value })
